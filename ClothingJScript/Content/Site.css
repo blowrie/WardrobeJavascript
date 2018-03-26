@@ -1,0 +1,128 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    text-align: center;
+    background-color: royalblue;
+    width: 300px;
+    height: 300px;
+}
+
+.caption {
+    margin-top: 30px;
+}
+
+    .caption h3 {
+        color: snow;
+    }
+
+    .caption p {
+        color: snow;
+    }
+
+.link a {
+    color: snow;
+}
+
+#ad {
+    width: 100%;
+    height: 100%;
+}
+
+#colorselector {
+    width: 300px; 
+}
+
+#HomeRow {
+    height: 300px;   
+    
+}
+
+#advertise {
+    width:100%;
+    height: 300px;
+}
+
+.col-md-6 {
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    width: 460px;
+}
+
+#Pyramid {
+    margin-top: 50px;
+}
+
+#wishlist {
+    background: url(/Images/shoegallery.jpg) no-repeat center center;
+    height: 300px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#wlinput {
+    height: 300px;
+}
+
+.col-md-4 {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+}
+
+#itsaform {
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+#clothtop {
+    height: 200px !important; 
+}
+
+#default {
+    background: white !important;
+}

@@ -1,0 +1,172 @@
+﻿@model IEnumerable<ClothingJScript.Models.Style>
+
+@{
+    ViewBag.Title = "Index";
+    var color = "default";
+ 
+}
+
+<script src="~/ClothingScript.js"></script>
+
+<div class="container">
+    <div class="title">
+        <h1>Closet Inventory</h1>
+        @Html.ActionLink("Create New", "Create")
+    </div>
+
+   
+
+
+    <div class="row">
+        <div class="col-md-6" id="clothtop">
+            <h2>Add To Your Collection</h2>
+            <button type="button" onclick="newTab('https://www.nike.com/us/en_us/')">Let's Shop</button>
+        </div>
+        <div class=" = col-md-6" id="clothtop">
+            <h2>What color clothes are you looking for?</h2>
+            <input id="colorSelector" placeholder="Colors: blue, black, white, red, orange, green"/>
+            <button type="button" onclick="Search(/*tried putting check here and passing into my javascript fucntion but didnt work*/)">Search</button>
+        </div>
+    </div>
+    <div class"row">
+        @foreach (var item in Model)
+    {
+        if (color == "default")
+        {
+
+            <div class="col-md-4" id="default">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>@Html.DisplayFor(modelItem => item.StyleType)</h3>
+                        <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                        <p><img src="@Html.DisplayFor(modelItem => item.Photo)" /></p>
+                        <p class="link">@Html.ActionLink("Edit", "Edit", new { id = item.StyleID }) | @Html.ActionLink("Details", "Details", new { id = item.StyleID })</p>
+                    </div>
+                </div>
+            </div>
+    }
+
+}
+        <!--
+
+
+            @foreach (var item in Model)
+        {
+            if (color == "blue" && item.Color == "blue")
+            {
+
+                <div class="col-md-4" id="default">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>@Html.DisplayFor(modelItem => item.StyleType)</h3>
+                            <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                            <p><img src="@Html.DisplayFor(modelItem => item.Photo)" /></p>
+                            <p class="link">@Html.ActionLink("Edit", "Edit", new { id = item.StyleID }) | @Html.ActionLink("Details", "Details", new { id = item.StyleID })</p>
+                        </div>
+                    </div>
+                </div>
+        }
+
+    }
+
+            @foreach (var item in Model)
+        {
+            if (color == "black" && item.Color == "black")
+            {
+
+                <div class="col-md-4" id="default">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>@Html.DisplayFor(modelItem => item.StyleType)</h3>
+                            <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                            <p><img src="@Html.DisplayFor(modelItem => item.Photo)" /></p>
+                            <p class="link">@Html.ActionLink("Edit", "Edit", new { id = item.StyleID }) | @Html.ActionLink("Details", "Details", new { id = item.StyleID })</p>
+                        </div>
+                    </div>
+                </div>
+        }
+
+    }
+
+            @foreach (var item in Model)
+        {
+            if (color == "white" && item.Color == "white")
+            {
+
+                <div class="col-md-4" id="default">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>@Html.DisplayFor(modelItem => item.StyleType)</h3>
+                            <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                            <p><img src="@Html.DisplayFor(modelItem => item.Photo)" /></p>
+                            <p class="link">@Html.ActionLink("Edit", "Edit", new { id = item.StyleID }) | @Html.ActionLink("Details", "Details", new { id = item.StyleID })</p>
+                        </div>
+                    </div>
+                </div>
+        }
+
+    }
+
+
+            @foreach (var item in Model)
+        {
+            if (color == "green" && item.Color == "green")
+            {
+
+                <div class="col-md-4" id="default">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>@Html.DisplayFor(modelItem => item.StyleType)</h3>
+                            <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                            <p><img src="@Html.DisplayFor(modelItem => item.Photo)" /></p>
+                            <p class="link">@Html.ActionLink("Edit", "Edit", new { id = item.StyleID }) | @Html.ActionLink("Details", "Details", new { id = item.StyleID })</p>
+                        </div>
+                    </div>
+                </div>
+        }
+
+    }
+
+
+            @foreach (var item in Model)
+        {
+            if (color == "red" && item.Color == "red")
+            {
+
+                <div class="col-md-4" id="default">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>@Html.DisplayFor(modelItem => item.StyleType)</h3>
+                            <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                            <p><img src="@Html.DisplayFor(modelItem => item.Photo)" /></p>
+                            <p class="link">@Html.ActionLink("Edit", "Edit", new { id = item.StyleID }) | @Html.ActionLink("Details", "Details", new { id = item.StyleID })</p>
+                        </div>
+                    </div>
+                </div>
+        }
+
+    }
+
+
+            @foreach (var item in Model)
+        {
+            if (color == "orange" && item.Color == "orange")
+            {
+
+                <div class="col-md-4" id="default">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>@Html.DisplayFor(modelItem => item.StyleType)</h3>
+                            <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                            <p><img src="@Html.DisplayFor(modelItem => item.Photo)" /></p>
+                            <p class="link">@Html.ActionLink("Edit", "Edit", new { id = item.StyleID }) | @Html.ActionLink("Details", "Details", new { id = item.StyleID })</p>
+                        </div>
+                    </div>
+                </div>
+        }
+
+    }
+
+                -->
+        </div>
+    </div>

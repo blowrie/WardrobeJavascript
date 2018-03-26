@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/ClothingScript.js"></script>
+
+<div class="jumbotron">
+    <video id="ad" onended= myFunction() controls autoplay><source src="~/Images/Together - State Farm® Commercial (youtubemp4.to).mp4" typeof="video/mp4"/></video>
+</div>
+
+<div class="row" id="HomeRow">
+    <div class="col-md-6">
+        <h2>Check out your clothes</h2>
+        <p><a class="btn btn-default" href="~/Styles/Index">Check it out! &raquo;</a></p>
+    </div>
+    <div class="col-md-6" id="adrightlow">
+        <img id="advertise" src="~/Images/adgif.gif" /> 
+        <p><a class="btn btn-default" onclick="removal()">Remove ad &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row" id="Pyramid">
+    <div class="col-md-4" id="wishlist" onclick="swap('wishlist', 'wlinput')">
+        <h1>Click Me to Add Items to Your Wish List</h1>
+    </div>
+    <div class="col-md-4" id="wlinput" hidden>
+        <form action="/action_page.php">
+            Item Name:<br>
+            <input type="text" name="name">
+            <br>
+            Item Brand:<br>
+            <input type="text" name="Brand">
+            <br>
+            Item price:<br>
+            <input type="text" name="Price">
+            <br><br>
+            <button type="button" class="btn" onclick="swap('wishlist','wlinput')">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4" id="dropdown">
+        <h2>Choose Your Favorite Brand of the Options Below</h2>
+        <form id="itsaform">
+            <select onclick="Populate()" id="favbrand">
+                <option>Choose a brand</option>
+            </select>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>View your clothes categories</h2>
+        <p>@Html.ActionLink("Types of clothes", "Index", "Clothings")</p>
+    </div>
+</div>
